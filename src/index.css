@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Rubik&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  color: #17294d;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+}
