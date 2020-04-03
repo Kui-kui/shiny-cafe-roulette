@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shiny-cafe-roulette/precache-manifest.5db3f9c3274e283990329645ec626528.js"
+  "/shiny-cafe-roulette/precache-manifest.2a2a1965096c1f70f4c17537301c2e84.js"
 );
 
 self.addEventListener('message', (event) => {
