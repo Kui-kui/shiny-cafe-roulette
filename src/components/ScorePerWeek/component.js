@@ -21,7 +21,7 @@ const ScorePerWeek = ({ data }) => {
     const playerScores = data.reduce(
       (acc, player) => ({
         ...acc,
-        [player.name]: parseFloat(player.scores[week].replace(',', '.')) || 0,
+        [player.name]: player.scores[week],
       }),
       {},
     );

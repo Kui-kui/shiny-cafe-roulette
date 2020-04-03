@@ -1,4 +1,5 @@
 /* global window */
+import randomColor from 'randomcolor';
 
 const API_KEY = 'AIzaSyAKXNqz7rb0JesWgufQda8fp-Qw_V78yyE';
 const SPREADSHEET_ID = '18QgScq55OUiDA4L886mQnZXZV6XW6KEcKX_scQHGYgk';
@@ -19,11 +20,12 @@ export const load = async (callback) => {
               values.slice(1).map((value) => {
                 const [name, ...scores] = value;
                 return {
+                  color: randomColor(),
                   name,
                   scores: scores.reduce(
                     (acc, score, index) => ({
                       ...acc,
-                      [weeks[index]]: score,
+                      [weeks[index]]: parseFloat(score.replace(/,/g, '.')) || 0,
                     }),
                     [],
                   ),

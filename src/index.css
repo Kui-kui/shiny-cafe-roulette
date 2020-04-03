@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-p {
+label, p {
   color: #17294d;
   font-family: 'Rubik', sans-serif;
   margin: 0;
