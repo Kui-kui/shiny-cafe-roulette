@@ -9,15 +9,25 @@ export const load = async (callback) => {
       window.gapi.client.load('sheets', 'v4', () => {
         window.gapi.client.sheets.spreadsheets.values
           .get({
-            range: 'Scores!A2:F40',
+            range: 'Scores!A1:F40',
             spreadsheetId: SPREADSHEET_ID,
           })
           .then(({ result }) => {
             const { values } = result;
+            const weeks = values[0].slice(1);
             callback(
-              values.map((value) => {
+              values.slice(1).map((value) => {
                 const [name, ...scores] = value;
-                return { name, scores };
+                return {
+                  name,
+                  scores: scores.reduce(
+                    (acc, score, index) => ({
+                      ...acc,
+                      [weeks[index]]: score,
+                    }),
+                    [],
+                  ),
+                };
               }),
             );
           });

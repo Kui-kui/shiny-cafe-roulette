@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { load } from '../../helpers/spreadsheet';
 import Error from '../../components/Error';
 import Loader from '../../components/Loader';
+import ScorePerWeek from '../../components/ScorePerWeek';
+import Styled from './styles';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -32,11 +34,9 @@ const App = () => {
   }
 
   return (
-    <div className="root">
-      {data.map(({ name, scores }) => (
-        <p>{name}</p>
-      ))}
-    </div>
+    <Styled>
+      <ScorePerWeek data={data} />
+    </Styled>
   );
 };
 

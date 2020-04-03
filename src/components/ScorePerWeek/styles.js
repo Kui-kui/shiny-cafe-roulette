@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  padding-top: 48px;
+  display: flex;
+  justify-content: center;
 `;
