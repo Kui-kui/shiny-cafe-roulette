@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css",
+    "main.js": "/shiny-cafe-roulette/static/js/main.3c7ab319.chunk.js",
+    "main.js.map": "/shiny-cafe-roulette/static/js/main.3c7ab319.chunk.js.map",
+    "runtime-main.js": "/shiny-cafe-roulette/static/js/runtime-main.cb5bf134.js",
+    "runtime-main.js.map": "/shiny-cafe-roulette/static/js/runtime-main.cb5bf134.js.map",
+    "static/js/2.3d001a92.chunk.js": "/shiny-cafe-roulette/static/js/2.3d001a92.chunk.js",
+    "static/js/2.3d001a92.chunk.js.map": "/shiny-cafe-roulette/static/js/2.3d001a92.chunk.js.map",
+    "index.html": "/shiny-cafe-roulette/index.html",
+    "precache-manifest.5db3f9c3274e283990329645ec626528.js": "/shiny-cafe-roulette/precache-manifest.5db3f9c3274e283990329645ec626528.js",
+    "service-worker.js": "/shiny-cafe-roulette/service-worker.js",
+    "static/css/main.fbf2a2e9.chunk.css.map": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css.map",
+    "static/js/2.3d001a92.chunk.js.LICENSE.txt": "/shiny-cafe-roulette/static/js/2.3d001a92.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb5bf134.js",
+    "static/js/2.3d001a92.chunk.js",
+    "static/css/main.fbf2a2e9.chunk.css",
+    "static/js/main.3c7ab319.chunk.js"
+  ]
+}
