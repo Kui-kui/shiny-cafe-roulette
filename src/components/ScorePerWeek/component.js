@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { path, keys, prop } from 'ramda';
-import randomColor from 'randomcolor';
+import { path, keys } from 'ramda';
 import React from 'react';
 import {
   LineChart,
@@ -16,7 +15,7 @@ import Styled from './styles';
 
 const ScorePerWeek = ({ data }) => {
   const weeks = keys(path([0, 'scores'])(data));
-  const names = data.map(prop('name'));
+
   const formattedData = weeks.map((week) => {
     const playerScores = data.reduce(
       (acc, player) => ({
@@ -37,12 +36,12 @@ const ScorePerWeek = ({ data }) => {
         <YAxis domain={[-1, 4]} minTickGap={0.5} type="number" />
         <CartesianGrid strokeDasharray="0.1 0.1" />
         <Tooltip />
-        {names.map((name) => (
+        {data.map(({ color, name }) => (
           <Line
             key={name}
             activeDot={{ r: 8 }}
             dataKey={name}
-            stroke={randomColor()}
+            stroke={color}
             type="monotone"
           />
         ))}
