@@ -2,14 +2,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './screens/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HashRouter basename="/">
+    <Route component={App} exact path="/" />
+  </HashRouter>,
   document.getElementById('root'),
 );
 
