@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const SPREADSHEET_URL =
-  'https://docs.google.com/spreadsheets/d/1W013Z2u7w4aXUoPbDYrhStEft7UGOw3AlZ31GuSlzIc/edit?usp=sharing';
+import { load } from '../../helpers/spreadsheet';
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  useEffect(async () => {
+    try {
+      await load(setData);
+      setLoading(false);
+    } catch (err) {
+      console.error(err);
+    }
+  }, []);
   return <div className="App" />;
 };
 
