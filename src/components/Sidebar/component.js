@@ -32,10 +32,10 @@ const Sidebar = ({ data, selectedPlayers, setSelectedPlayers }) => {
     <Styled>
       <p className="title">List of players</p>
       <div className="buttonContainer">
-        <button onClick={selectAll} type="button">
+        <button className="button" onClick={selectAll} type="button">
           Select all
         </button>
-        <button onClick={deselectAll} type="button">
+        <button className="button" onClick={deselectAll} type="button">
           Deselect all
         </button>
       </div>
