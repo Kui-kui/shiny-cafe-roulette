@@ -12,12 +12,14 @@ import {
 } from 'recharts';
 
 import Styled from './styles';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const getWeekIndex = (week) => week[1];
 
 const ScorePerWeek = ({ data }) => {
-  const weeks = keys(path([0, 'scores'])(data));
+  const { width: screenWidth } = useWindowSize();
 
+  const weeks = keys(path([0, 'scores'])(data));
   const formattedData = weeks.map((week) => {
     const playerScores = data.reduce((acc, player) => {
       const weekIndex = getWeekIndex(week);
@@ -36,7 +38,7 @@ const ScorePerWeek = ({ data }) => {
 
   return (
     <Styled>
-      <LineChart data={formattedData} height={600} width={800}>
+      <LineChart data={formattedData} height={600} width={screenWidth - 200}>
         <XAxis dataKey="week" padding={{ left: 30, right: 30 }} />
         <YAxis type="number" />
         <CartesianGrid strokeDasharray="0.1 0.1" />
