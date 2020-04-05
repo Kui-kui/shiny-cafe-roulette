@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { prop } from 'ramda';
 
 export default styled.div`
   padding: 16px;
@@ -25,6 +26,8 @@ export default styled.div`
   }
 
   .labelContainer {
+    align-items: center;
+    display: flex;
     margin-bottom: 4px;
   }
 
@@ -32,4 +35,14 @@ export default styled.div`
     font-size: 24px;
     margin-bottom: 16px;
   }
+`;
+
+export const Checkbox = styled.div`
+  background-color: ${({ isSelected, color }) =>
+    isSelected ? color : 'white'};
+  border-radius: 10px;
+  border: 1px solid ${prop('color')};
+  height: 10px;
+  margin-right: 4px;
+  width: 10px;
 `;

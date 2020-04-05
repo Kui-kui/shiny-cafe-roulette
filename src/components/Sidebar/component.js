@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { sum, values, prop } from 'ramda';
 import React, { useCallback } from 'react';
 
-import Styled from './styles';
+import Styled, { Checkbox } from './styles';
 
 const Sidebar = ({ data, selectedPlayers, setSelectedPlayers }) => {
   const getIsSelected = (name) => selectedPlayers.includes(name);
@@ -39,16 +39,15 @@ const Sidebar = ({ data, selectedPlayers, setSelectedPlayers }) => {
           Deselect all
         </button>
       </div>
-      {data.map(({ name, scores }) => {
+      {data.map(({ color, name, scores }) => {
         const totalScore = sum(values(scores));
         return (
-          <div key={name} className="labelContainer">
-            <input
-              checked={getIsSelected(name)}
-              id={name}
-              onChange={() => toggle(name)}
-              type="checkbox"
-            />
+          <div
+            key={name}
+            className="labelContainer"
+            onClick={() => toggle(name)}
+          >
+            <Checkbox color={color} isSelected={getIsSelected(name)} />
             <label
               className="label"
               htmlFor={name}
