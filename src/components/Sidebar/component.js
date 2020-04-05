@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { sum, values } from 'ramda';
+import { sum, values, prop } from 'ramda';
 import React, { useCallback } from 'react';
 
 import Styled from './styles';
@@ -20,9 +20,25 @@ const Sidebar = ({ data, selectedPlayers, setSelectedPlayers }) => {
     [getIsSelected, selectedPlayers, setSelectedPlayers],
   );
 
+  const selectAll = useCallback(() => {
+    setSelectedPlayers(data.map(prop('name')));
+  }, [data, setSelectedPlayers]);
+
+  const deselectAll = useCallback(() => {
+    setSelectedPlayers([]);
+  }, [setSelectedPlayers]);
+
   return (
     <Styled>
       <p className="title">List of players</p>
+      <div className="buttonContainer">
+        <button onClick={selectAll} type="button">
+          Select all
+        </button>
+        <button onClick={deselectAll} type="button">
+          Deselect all
+        </button>
+      </div>
       {data.map(({ name, scores }) => {
         const totalScore = sum(values(scores));
         return (

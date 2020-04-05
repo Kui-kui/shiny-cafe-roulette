@@ -42,7 +42,7 @@ const ScorePerWeek = ({ data }) => {
             activeDot={{ r: 8 }}
             dataKey={name}
             stroke={color}
-            type="monotone"
+            type="natural"
           />
         ))}
         <Legend />
