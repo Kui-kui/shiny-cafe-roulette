@@ -5,7 +5,9 @@ import React, { useCallback } from 'react';
 import Styled, { Checkbox } from './styles';
 
 const Sidebar = ({ data, selectedPlayers, setSelectedPlayers }) => {
-  const getIsSelected = (name) => selectedPlayers.includes(name);
+  const getIsSelected = useCallback((name) => selectedPlayers.includes(name), [
+    selectedPlayers,
+  ]);
   const toggle = useCallback(
     (name) => {
       const isSelected = getIsSelected(name);
