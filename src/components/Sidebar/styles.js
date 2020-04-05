@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  padding: 16px 24px 0 16px;
+  padding: 16px 24px 16px 16px;
 
   .buttonContainer {
     display: flex;

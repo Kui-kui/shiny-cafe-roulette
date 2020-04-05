@@ -5,6 +5,7 @@ import { prop } from 'ramda';
 import { load } from '../../helpers/spreadsheet';
 import Error from '../../components/Error';
 import Loader from '../../components/Loader';
+import Podium from '../../components/Podium';
 import ScorePerWeek from '../../components/ScorePerWeek';
 import Sidebar from '../../components/Sidebar';
 import Styled from './styles';
@@ -54,6 +55,7 @@ const App = () => {
       }
     >
       <Styled>
+        <Podium data={data} />
         <ScorePerWeek data={filteredData} />
       </Styled>
     </ReactSidebar>
