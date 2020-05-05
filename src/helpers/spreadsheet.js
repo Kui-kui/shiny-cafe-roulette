@@ -10,7 +10,7 @@ export const load = async (callback) => {
       window.gapi.client.load('sheets', 'v4', () => {
         window.gapi.client.sheets.spreadsheets.values
           .get({
-            range: 'Scores!A1:F40',
+            range: 'Scores!A1:G40',
             spreadsheetId: SPREADSHEET_ID,
           })
           .then(({ result }) => {
