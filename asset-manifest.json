@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css",
-    "main.js": "/shiny-cafe-roulette/static/js/main.19f4e253.chunk.js",
-    "main.js.map": "/shiny-cafe-roulette/static/js/main.19f4e253.chunk.js.map",
+    "main.js": "/shiny-cafe-roulette/static/js/main.5bf6d2bf.chunk.js",
+    "main.js.map": "/shiny-cafe-roulette/static/js/main.5bf6d2bf.chunk.js.map",
     "runtime-main.js": "/shiny-cafe-roulette/static/js/runtime-main.cb5bf134.js",
     "runtime-main.js.map": "/shiny-cafe-roulette/static/js/runtime-main.cb5bf134.js.map",
-    "static/js/2.6abab4fa.chunk.js": "/shiny-cafe-roulette/static/js/2.6abab4fa.chunk.js",
-    "static/js/2.6abab4fa.chunk.js.map": "/shiny-cafe-roulette/static/js/2.6abab4fa.chunk.js.map",
+    "static/js/2.bbd679fb.chunk.js": "/shiny-cafe-roulette/static/js/2.bbd679fb.chunk.js",
+    "static/js/2.bbd679fb.chunk.js.map": "/shiny-cafe-roulette/static/js/2.bbd679fb.chunk.js.map",
     "index.html": "/shiny-cafe-roulette/index.html",
-    "precache-manifest.92afb9548f36e7fb7ccff3de5cd3b84b.js": "/shiny-cafe-roulette/precache-manifest.92afb9548f36e7fb7ccff3de5cd3b84b.js",
+    "precache-manifest.d44c4c706cbe91fcdcc83540610bd48a.js": "/shiny-cafe-roulette/precache-manifest.d44c4c706cbe91fcdcc83540610bd48a.js",
     "service-worker.js": "/shiny-cafe-roulette/service-worker.js",
     "static/css/main.fbf2a2e9.chunk.css.map": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css.map",
-    "static/js/2.6abab4fa.chunk.js.LICENSE.txt": "/shiny-cafe-roulette/static/js/2.6abab4fa.chunk.js.LICENSE.txt"
+    "static/js/2.bbd679fb.chunk.js.LICENSE.txt": "/shiny-cafe-roulette/static/js/2.bbd679fb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cb5bf134.js",
-    "static/js/2.6abab4fa.chunk.js",
+    "static/js/2.bbd679fb.chunk.js",
     "static/css/main.fbf2a2e9.chunk.css",
-    "static/js/main.19f4e253.chunk.js"
+    "static/js/main.5bf6d2bf.chunk.js"
   ]
 }
