@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1630eba32cfaacd3253e9d70c03d15a5",
+    "revision": "67141ad52b09611fd32046c9b42380a4",
     "url": "/shiny-cafe-roulette/index.html"
   },
   {
-    "revision": "5d12b965866b1c285266",
+    "revision": "35db7b89f48bcef537f2",
     "url": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css"
   },
   {
-    "revision": "0d0501880b4d6c83d39b",
-    "url": "/shiny-cafe-roulette/static/js/2.bbd679fb.chunk.js"
+    "revision": "f2a23cd381c0ffee0b43",
+    "url": "/shiny-cafe-roulette/static/js/2.7ed42ba0.chunk.js"
   },
   {
     "revision": "ca3cfcda77dc9f4f71fda9fdfcf14fb0",
-    "url": "/shiny-cafe-roulette/static/js/2.bbd679fb.chunk.js.LICENSE.txt"
+    "url": "/shiny-cafe-roulette/static/js/2.7ed42ba0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d12b965866b1c285266",
-    "url": "/shiny-cafe-roulette/static/js/main.5bf6d2bf.chunk.js"
+    "revision": "35db7b89f48bcef537f2",
+    "url": "/shiny-cafe-roulette/static/js/main.d0639290.chunk.js"
   },
   {
     "revision": "7b530384a0876974f831",
