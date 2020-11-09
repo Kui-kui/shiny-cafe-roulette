@@ -13,17 +13,18 @@ import Styled from './styles';
 const App = () => {
   const [data, setData] = useState([]);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [selectedSeason, setSelectedSeason] = useState('S2');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const filteredData = data.filter(({ name }) =>
-    selectedPlayers.includes(name),
+    selectedPlayers.includes(name)
   );
 
   useEffect(() => {
     const onLoad = async () => {
       try {
-        await load((response) => {
+        await load(selectedSeason, response => {
           setData(response);
           setSelectedPlayers(response.map(prop('name')));
           setLoading(false);
@@ -33,7 +34,7 @@ const App = () => {
       }
     };
     onLoad();
-  }, []);
+  }, [selectedSeason]);
 
   if (loading) {
     return <Loader />;
@@ -49,6 +50,8 @@ const App = () => {
       sidebar={
         <Sidebar
           data={data}
+          selectedSeason={selectedSeason}
+          setSelectedSeason={setSelectedSeason}
           selectedPlayers={selectedPlayers}
           setSelectedPlayers={setSelectedPlayers}
         />

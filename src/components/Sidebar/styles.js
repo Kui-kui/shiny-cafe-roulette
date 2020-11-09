@@ -31,6 +31,10 @@ export default styled.div`
     margin-bottom: 4px;
   }
 
+  .names {
+    margin-bottom: 16px;
+  }
+
   .title {
     font-size: 24px;
     margin-bottom: 16px;

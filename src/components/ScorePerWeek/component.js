@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { path, keys, values, sum } from 'ramda';
+import { path, keys, values, sum, max } from 'ramda';
 import React from 'react';
 import {
   CartesianGrid,
@@ -14,15 +14,20 @@ import {
 import Styled from './styles';
 import useWindowSize from '../../hooks/useWindowSize';
 
-const getWeekIndex = (week) => week[1];
+const getWeekIndex = week => week[1];
 
 const ScorePerWeek = ({ data }) => {
-  const { width: screenWidth } = useWindowSize();
+  const { height: screenHeight, width: screenWidth } = useWindowSize();
 
-  const weeks = keys(path([0, 'scores'])(data));
-  const formattedData = weeks.map((week) => {
+  const scoreArrayLengths = data.map(({ scores }) => keys(scores).length);
+  const indexWithMostScores = scoreArrayLengths.indexOf(
+    Math.max(...scoreArrayLengths)
+  );
+  const weeks = keys(path([indexWithMostScores, 'scores'])(data));
+
+  const formattedData = weeks.map(week => {
     const playerScores = data.reduce((acc, player) => {
-      const weekIndex = getWeekIndex(week);
+      const weekIndex = parseInt(getWeekIndex(week), 10) + 1;
       const { name, scores } = player;
       const scoresUntilWeek = sum(values(scores).slice(0, weekIndex));
       return {
@@ -38,7 +43,11 @@ const ScorePerWeek = ({ data }) => {
 
   return (
     <Styled>
-      <LineChart data={formattedData} height={600} width={screenWidth - 200}>
+      <LineChart
+        data={formattedData}
+        height={screenHeight - 200}
+        width={screenWidth - 200}
+      >
         <XAxis dataKey="week" padding={{ left: 30, right: 30 }} />
         <YAxis type="number" />
         <CartesianGrid strokeDasharray="0.1 0.1" />
@@ -63,7 +72,7 @@ ScorePerWeek.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       scores: PropTypes.shape({}).isRequired,
-    }),
+    })
   ).isRequired,
 };
 
