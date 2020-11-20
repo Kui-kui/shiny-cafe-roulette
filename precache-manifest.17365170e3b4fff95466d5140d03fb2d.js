@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67141ad52b09611fd32046c9b42380a4",
+    "revision": "5c0d7545550d4e1d44e46a9555ce9fe5",
     "url": "/shiny-cafe-roulette/index.html"
   },
   {
-    "revision": "35db7b89f48bcef537f2",
+    "revision": "7e7d3eba998308e2ce2d",
     "url": "/shiny-cafe-roulette/static/css/main.fbf2a2e9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shiny-cafe-roulette/static/js/2.7ed42ba0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "35db7b89f48bcef537f2",
-    "url": "/shiny-cafe-roulette/static/js/main.d0639290.chunk.js"
+    "revision": "7e7d3eba998308e2ce2d",
+    "url": "/shiny-cafe-roulette/static/js/main.141ebf5e.chunk.js"
   },
   {
     "revision": "7b530384a0876974f831",
