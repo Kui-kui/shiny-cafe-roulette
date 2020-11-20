@@ -5,7 +5,7 @@ const API_KEY = 'AIzaSyAKXNqz7rb0JesWgufQda8fp-Qw_V78yyE';
 const SPREADSHEET_ID = '18QgScq55OUiDA4L886mQnZXZV6XW6KEcKX_scQHGYgk';
 
 const SEASON_MAPPING = {
-  S1: 'S1!A1:G40',
+  S1: 'S1!A1:H40',
   S2: 'S2!A1:F34',
 };
 
